@@ -108,35 +108,40 @@ function validateCurrentStep() {
     return true;
 }
 
-document.getElementById('continueBtn').addEventListener('click', () => {
+document.getElementById('continueBtn').addEventListener('click', async () => {
+    const continueBtn = document.getElementById('continueBtn');
+
     if (validateCurrentStep()) {
         if (currentStep === questions.length - 1) {
-            // Submit final data to backend
-            fetch('https://tradeved-backend-1.onrender.com/api/waitlist', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(async response => {
+            // Disable button to prevent multiple clicks
+            continueBtn.disabled = true;
+            continueBtn.textContent = 'Submitting...';
+
+            try {
+                const response = await fetch('https://tradeved-backend-1.onrender.com/api/waitlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
                 if (!response.ok) {
-                    // Extract error message from backend response
                     const errorData = await response.json().catch(() => ({}));
                     const message = errorData.message || 'Failed to join the waitlist.';
                     throw new Error(message);
                 }
-                return response.json();
-            })
-            .then(data => {
+
+                const data = await response.json();
                 console.log('Success:', data);
-                // Redirect or show success page
                 window.location.href = '../Finish_form/index.html';
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error:', error);
                 alert(error.message);
-            });
+                continueBtn.disabled = false;
+                continueBtn.textContent = 'Submit';
+            }
+
             return;
         }
 
