@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f1209;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fix: Prevent vertical overflow */
+    overflow-y: hidden;
+}
+
+
+/* Animated blobs */
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 60vw;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(12, 247, 79, 0.3), transparent);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+    transform-origin: center;
+}
+
+body::before {
+    top: auto;
+    bottom: -20%;
+    left: -20%;
+    right: auto;
+    animation: blobLeftToCenter 12s ease-in-out infinite;
+}
+
+body::after {
+    top: -20%;
+    right: -20%;
+    bottom: auto;
+    left: auto;
+    animation: blobRightToCenter 12s ease-in-out infinite;
+}
+
+@keyframes blobLeftToCenter {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(50vw, -30vh) scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes blobRightToCenter {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50vw, 30vh) scale(1.5);
+        opacity: 1;
+    }
+}
+
+
+/* Original gradient corners - keeping these for layered effect */
+
+.gradient-corner {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(circle at center, rgba(155, 236, 0, 0.12) 0%, rgba(155, 236, 0, 0.05) 60%, transparent 100%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.75;
+}
+
+.gradient-top-right {
+    top: 0;
+    right: 0;
+}
+
+.gradient-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.top-logo {
+    position: absolute;
+    top: 60px;
+    left: 90px;
+    max-width: 150px;
+    margin-bottom: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.congrats-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: #F5F5F5;
+    line-height: 100%;
+}
+
+.congrats-subtext {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #F5F5F5;
+    line-height: 100%;
+}
+
+.checkmark-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    display: block;
+    /* box-shadow: 0 0 40px rgba(155, 236, 0, 0.6); */
+}
+
+
+/* Sparkle effect */
+
+.sparkle {
+    position: fixed;
+    /* Changed from absolute to fixed */
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #9BEC00;
+    box-shadow: 0 0 10px 2px rgba(155, 236, 0, 0.7);
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+/* Fix for overflow issues */
+
+html {
+    overflow: hidden;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <!-- Top Right Corner -->
+    <div class="bg-gradient bg-gradient-1"></div>
+
+    <!-- Center of Hero Section -->
+    <div class="bg-gradient bg-gradient-hero-center"></div>
+
+    <!-- Left of Tools Section -->
+    <div class="bg-gradient bg-gradient-tools-left"></div>
+
+    <!-- Left Start of Footer Section -->
+    <div class="bg-gradient bg-gradient-footer-left"></div>
+
+    <!-- Beside FAQ Section -->
+    <div class="bg-gradient bg-gradient-faq-side"></div>
+
+    <!-- Darker Gradient Behind Join Waitlist Button -->
+    <div class="bg-gradient bg-gradient-hero-button"></div>
+
+    <!-- Left of Support Section -->
+    <div class="bg-gradient bg-gradient-support-left"></div>
+
+
+
+
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header class="navbar">
+            <div class="logo">
+                <a href="../FrontPage/index.html">
+                    <img src="./assets/Frame 1261152830.png" alt="TradeVed Logo">
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <div class="products-dropdown">
+                    <button class="products-button">
+                        Products
+                        <svg class="arrow-icon"xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="products-menu">
+                        <div class="menu-section">
+                            <h3>Beginner</h3>
+                            <div class="menu-items">
+                                <div class="menu-item">
+                                    <h4>Quest</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h4>Paper Trading</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-section">
+                            <h3>Intermediate</h3>
+                            <div class="menu-items">
+                                <div class="menu-item">
+                                    <h4>Copy Trading</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-section">
+                            <h3>Advanced</h3>
+                            <div class="menu-items">
+                                <div class="menu-item">
+                                    <h4>Strategy Visualizer</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h4>Screener</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h4>Backtest</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h4>Algo trading</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../Pricing/index.html">Pricing</a>
+            </nav>
+            <nav class="auth">
+                <!--<a href="#">Create account</a>
+                <span>|</span>
+                <a href="#">Log in</a>-->
+                <!-- Toggle Switch -->
+                <div class="theme-toggle-container">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-slider"></span>
+        </label>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Unified platform for systematic trading and learning</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="btn-primary" onclick="location.href='../Join_Waitlist/index.html'"><span>Join Waitlist</span></button>
+            <div class="hero-image"><img src="./assets/Group 239268.png" alt=""></div>
+        </section>
+
+
+
+
+        <!-- Tools Section -->
+        <div class="tools">
+
+            <div class="inner">
+                <h2>Tools to Trade Smarter</h2>
+                <div class="tools-content">
+                    <div class="tabs">
+                        <button class="tab" data-filter="all"><span>All Products</span></button>
+                        <button class="tab" data-filter="beginner"><span>Beginner</span></button>
+                        <button class="tab" data-filter="intermediate"><span>Intermediate</span></button>
+                        <button class="tab" data-filter="advanced"><span>Advanced</span></button>
+                    </div>
+                    <p>Unify your trading workflow.<br>Test strategies, go live, analyze performance, and automate—all in one place.<br>Built to support traders at every level.</p>
+
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="advanced">
+                    <img src="./assets/image 105.png" alt="Strategy Visualizer" />
+                    <div class="product-card-content">
+                        <h3>Strategy Visualizer</h3>
+                        <p class="product-description">Visualize your trading strategies with advanced charting and analytical tools to optimize performance.</p>
+                        <button class="btn-explore"><span>Explore</span></button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="advanced">
+                    <img src="./assets/image 105.png" alt="Backtest" />
+                    <div class="product-card-content">
+                        <h3>Backtest</h3>
+                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <button class="btn-explore"><span>Explore</span></button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="advanced">
+                    <img src="./assets/image 105.png" alt="Screener" />
+                    <div class="product-card-content">
+                        <h3>Screener</h3>
+                        <p class="product-description">Filter and find the best trading opportunities that match your criteria with our powerful screening tools.</p>
+                        <button class="btn-explore"><span>Explore</span></button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="advanced">
+                    <img src="./assets/image 105.png" alt="Algo Trading" />
+                    <div class="product-card-content">
+                        <h3>Algo Trading</h3>
+                        <p class="product-description">Create, test and deploy automated trading algorithms without writing complex code.</p>
+                        <button class="btn-explore"><span>Explore</span></button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="intermediate">
+                    <img src="./assets/image 105.png" alt="Journal" />
+                    <div class="product-card-content">
+                        <h3>Journal</h3>
+                        <p class="product-description">Track your trades, analyze patterns, and improve your performance with our comprehensive journal system.</p>
+                        <button class="btn-explore"><span>Explore</span></button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="beginner">
+                    <img src="./assets/image 105.png" alt="Quest" />
+                    <div class="product-card-content">
+                        <h3>Quest</h3>
+                        <p class="product-description">Learn trading concepts through interactive lessons and practical challenges to build your skills.</p>
+                        <button class="btn-explore"><span>Explore</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Video Section -->
+        <div id="video-container">
+            <iframe src="https://www.youtube.com/embed/uYq9INqpaOQ" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+
+        <!-- FAQs Container -->
+
+        <div class="faq-container">
+            <h2>How can we help you?</h2>
+            <p>Please enter your question and we will find a right answer for you</p>
+            <div class="cabs">
+                <button class="cab active" data-category="all"><span>All</span></button>
+                <button class="cab" data-category="category1"><span>Category 1</span></button>
+                <button class="cab" data-category="category2"><span>Category 2</span></button>
+                <button class="cab" data-category="category3"><span>Category 3</span></button>
+            </div>
+
+            <div class="faq-box">
+                <div class="faq" data-category="category1">
+                    <div class="faq-question">
+                        <span>What is Algo Trading?</span>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Algo trading, or algorithmic trading, is the use of computer programs and algorithms to execute financial market trades at high speed and volume.</p>
+                    </div>
+                </div>
+
+                <div class="faq" data-category="category2">
+                    <div class="faq-question">
+                        <span>What is Algo Trading?</span>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Algo trading helps traders execute predefined strategies efficiently.</p>
+                    </div>
+                </div>
+
+                <div class="faq" data-category="category3">
+                    <div class="faq-question">
+                        <span>What is Algo Trading?</span>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It reduces manual trading efforts and improves accuracy.</p>
+                    </div>
+                </div>
+
+                <div class="faq" data-category="category1">
+                    <div class="faq-question">
+                        <span>What is Algo Trading?</span>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Traders can automate buying and selling based on market conditions.</p>
+                    </div>
+                </div>
+
+                <div class="faq" data-category="category2">
+                    <div class="faq-question">
+                        <span>What is Algo Trading?</span>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It eliminates emotional decision-making in trading.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Support Section -->
+        <div class="support">
+            <div class="support-container">
+                <div id="heading">
+                    Get in touch for more information
+                </div>
+                <div id="desc">
+                    For more information kindly email us on <strong>support@tradeved.com</strong>
+                </div>
+            </div>
+            <button class="btn"><span>Connect with us</span></button>
+        </div>
+
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="footer-container">
+                <!-- Left Section (Logo & Description) -->
+                <div class="footer-left">
+                    <img src="./assets/Frame 1261152830.png" alt="TradeVed Logo" class="logo">
+                    <!-- Replace with actual logo -->
+                    <p>Streamlined learning to algo trading for retail traders</p>
+                    <div class="social-icons">
+                        <a href="https://web.whatsapp.com/"><img src="./assets/whatsapp-29.png" alt="WhatsApp"></a>
+                        <a href="https://www.instagram.com/"><img src="./assets/Instagram_logo_2016.svg.png" alt="Instagram"></a>
+                        <a href="https://twitter.com/"> <img src="./assets/Logo_of_Twitter.svg.png" alt="Twitter"></a>
+                        <a href="https://www.facebook.com/"> <img src="./assets/2021_Facebook_icon.svg.webp" alt="Facebook"></a>
+                    </div>
+                </div>
+
+                <!-- Right Section (Links) -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Products</h3>
+                        <p>(Users)</p>
+                        <ul>
+                            <li><a href="#">Quest</a></li>
+                            <li><a href="#">Journal</a></li>
+                            <li><a href="#">Build</a></li>
+                            <li><a href="#">Code</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Products</h3>
+                        <p>(Businesses)</p>
+                        <ul>
+                            <li><a href="#">Quest Creators</a></li>
+                            <li><a href="#">Lead Traders</a></li>
+                            <li><a href="#">For experts</a></li>
+                            <li><a href="#">For beginners</a></li>
+                            <li><a href="#">For Intermediates</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="">About</a></li>
+                            <li><a href="#">Brand Kit</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="#">Press and Media</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="">Blogs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Documents</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Tickets</a></li>
+                            <li><a href="#">Request Feature</a></li>
+                            <li><a href="#">Bug Bounty</a></li>
+                            <li><a href="../Contact Us/index.html">Contact Us</a></li>
+                            <li><a href="">Download and Resources</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Cookies Policies</a></li>
+                            <li><a href="#">Rewards Program</a></li>
+                            <li><a href="#">API License</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-bottom">
+                <p>©2025 TradeVed. All rights reserved.</p>
+            </div>
+        </div>
+
+        <button id="scrollTopBtn">
+            <img src="./assets/Arrow.png" alt="Scroll to Top">
+        </button>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

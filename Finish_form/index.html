@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TradeVed - Thank You</title>
+</head>
+
+<body>
+    <div class="gradient-corner gradient-top-right"></div>
+    <div class="gradient-corner gradient-bottom-left"></div>
+
+    <div class="container">
+        <img src="./assets/Frame 1261152830.png" alt="TradeVed Logo" class="logo top-logo">
+        <img src="./assets/Vector (3).png" alt="Success Checkmark" class="checkmark-image" />
+
+
+        <h1 class="congrats-title">Congratulations !!</h1>
+        <p class="congrats-subtext">You have joined our waitlist</p>
+    </div>
+
+    <!-- Add some sparkles for extra effect -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create sparkles
+            for (let i = 0; i < 15; i++) {
+                createSparkle();
+            }
+
+            function createSparkle() {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+
+                const x = Math.random() * (window.innerWidth - 10);
+                const y = Math.random() * (window.innerHeight - 10);
+
+                sparkle.style.left = `${x}px`;
+                sparkle.style.top = `${y}px`;
+                sparkle.style.animationDelay = `${Math.random() * 5}s`;
+
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => {
+                    sparkle.remove();
+                    createSparkle();
+                }, 3000 + Math.random() * 2000);
+            }
+
+            // Redirect after 5 seconds
+            setTimeout(() => {
+                window.location.href = '../FrontPage/index.html';
+            }, 5000);
+        });
+    </script>
+
+</body>
+
+</html>
