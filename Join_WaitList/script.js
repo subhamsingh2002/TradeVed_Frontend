@@ -118,7 +118,7 @@ document.getElementById('continueBtn').addEventListener('click', async () => {
             continueBtn.textContent = 'Submitting...';
 
             try {
-                const response = await fetch('https://tradeved-backend-1.onrender.com/api/waitlist', {
+                const response = await fetch('https://tradeved-backend-zhwx.onrender.com/api/waitlist', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
